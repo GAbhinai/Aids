@@ -13,7 +13,6 @@ public class AllOutput {
 		Transaction tx=session.beginTransaction();
 		
 		try {
-		
 			   List<Student> students = session.createQuery("FROM Student", Student.class).list();
 	            for (Student student : students) {
 	                System.out.println(
@@ -22,7 +21,6 @@ public class AllOutput {
 	                        + student.getName()
 	                );
 	            }		
-			
 		tx.commit();
 		System.out.println("Values Are Inserted");
 		}
